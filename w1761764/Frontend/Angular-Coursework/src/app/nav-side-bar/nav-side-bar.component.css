@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Varela', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
+}
+
+.sidenav-container {
+  height: 100%;
+  font-family: 'Varela', sans-serif;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-drawer-inner-container.ng-tns-c159-0 {
+  background: #0C2D48 !important;
+}
+mat-toolbar.mat-toolbar.ng-tns-c153-0.mat-toolbar-single-row {
+  color: white;
+}
+mat-sidenav.mat-drawer.mat-sidenav.sidenav.ng-tns-c153-0.ng-trigger.ng-trigger-transform.mat-drawer-side.mat-drawer-opened.mat-sidenav-fixed.ng-star-inserted {
+  background: linear-gradient(72deg, #0c2d48, #2e8bc0);
+  border: none;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(45deg, #2c84b7, #103856);
+}
+mat-icon.mat-icon.notranslate.material-icons.mat-icon-no-color {
+  margin-right: 8px;
+}
+#menu-nav-container {
+  padding-top: 200px;
+}
+
+.mat-nav-list {
+  padding: 5px;
+  font-family: 'Varela', sans-serif;
+
+}
+
+#menu-nav-container {
+  padding-top: 200px;
+}
+
+a.mat-list-item.mat-focus-indicator {
+  color: white !important;
+}
+
+mat-toolbar.mat-toolbar.ng-tns-c159-0.mat-toolbar-single-row {
+  color: white !important;
+}
+

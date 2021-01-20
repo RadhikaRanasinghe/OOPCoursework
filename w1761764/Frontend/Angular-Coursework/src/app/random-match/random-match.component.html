@@ -1,0 +1,59 @@
+<div class="main-wrapper">
+  <mat-card>
+    <label>Select year to generate a random match:
+      <input [(ngModel)]="premierLeagueYear" (change)="yearChanges()" type="number" min="1992" MAX="2999" required/>
+    </label>
+  </mat-card>
+  <div class="sub-wrapper">
+    <h1>Randomly generated match</h1>
+    <ng-container *ngIf="randomMatch">
+      <mat-card class="top-header">
+        <p>Date : {{randomMatch.matchDate.month | monthsFormat}} {{randomMatch.matchDate.day}}
+          , {{randomMatch.matchDate.year}}</p>
+      </mat-card>
+      <div class="rm-main-wrapper">
+        <div class="rm-row">
+          <div class="rm-col">
+            <div class="wrapper-r">
+              <div class="rm-col rad-name image-rad">
+                <img alt="image-club-h" src="assets/images/svg/Referee.svg">
+              </div>
+              <div class="rm-col rad-name">
+                <h6>Selected Home Club</h6>
+                <p>{{randomMatch.homeClub.name}}</p>
+              </div>
+              <div class="rm-col rad-score">
+                <p>Score</p>
+                <h6>{{randomMatch.goalsHomeScored}}</h6>
+              </div>
+            </div>
+          </div>
+          <div class="rm-col">
+            <div class="wrapper-r rm-VS">
+              <h1><b>VS</b></h1>
+            </div>
+          </div>
+          <div class="rm-col">
+            <div class="wrapper-r">
+              <div class="rm-col rad-name image-rad">
+                <img alt="image-club-a" src="assets/images/svg/Foul.svg">
+              </div>
+              <div class="rm-col rad-name">
+                <h6>Selected Away Club</h6>
+                <p>{{randomMatch.awayClub.name}}</p>
+              </div>
+              <div class="rm-col rad-score">
+                <p>Score</p>
+                <h6>{{randomMatch.goalsAwayScored}}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-section">
+        <button color="primary" mat-raised-button (click)="addMatch()">Add Match</button>
+        <button color="primary" mat-raised-button (click)="generateRandomMatch()">Generate Random Match</button>
+      </div>
+    </ng-container>
+  </div>
+</div>

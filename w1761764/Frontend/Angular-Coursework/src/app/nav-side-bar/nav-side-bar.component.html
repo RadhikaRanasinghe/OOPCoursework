@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <div id="menu-nav-container">
+      <mat-nav-list>
+        <a mat-list-item href="/home"><mat-icon>home</mat-icon>Home</a>
+        <a mat-list-item href="/league-table"><mat-icon>web_asset</mat-icon>League Table</a>
+        <a mat-list-item href="/random-match"><mat-icon>shuffle</mat-icon>Random Match</a>
+        <a mat-list-item href="/played-matches"><mat-icon>sports_soccer</mat-icon>Played Matches</a>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Premier League Manager </span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

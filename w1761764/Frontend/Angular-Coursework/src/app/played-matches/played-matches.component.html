@@ -1,0 +1,52 @@
+<div class="main-wrapper">
+  <mat-card>
+    <label>Select year to show matches played on the year:
+      <input [(ngModel)]="premierLeagueYear" (change)="yearChanges()" type="number" min="1992" MAX="2999" required/>
+    </label>
+  </mat-card>
+  <div class="sub-wrapper">
+    <h1>Played Matches</h1>
+    <!--Search Container-->
+    <mat-card class="top-header">
+      <div>
+        <div>
+          <label>Filter Date:</label>
+          <input [(ngModel)]="userInputDate" type="date" placeholder="date">
+          <button mat-raised-button (click)="search()">
+            <mat-icon>search</mat-icon>
+            Search
+          </button>
+        </div>
+      </div>
+    </mat-card>
+    <!------Matches Container ----->
+    <div id="match-container">
+      <div *ngFor="let matchPlayed of matchesPlayed; index as i" class="match">
+        <div class="wrapper-r">
+          <div class=" main-container-pm matches-one pm-comp image-pm">
+            <img src="assets/images/played/picture{{ (i % 13)}}.svg" alt="goal-keeper-image">
+          </div>
+          <div class="matches-one pm-comp">
+            <div class="pm-match-data">
+              <h6>Home</h6> <h6 class="md-detail">{{matchPlayed.homeClub.name}}</h6>
+              <div class="md-score">
+                <p>{{matchPlayed.goalsHomeScored}}</p>
+              </div>
+            </div>
+            <div class="pm-match-data">
+              <h6>Away</h6> <h6 class="md-detail">{{matchPlayed.awayClub.name}}</h6>
+              <div class="md-score second-player">
+                <p>{{matchPlayed.goalsAwayScored}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="matches-one pm-score">
+            <p>{{matchPlayed.matchDate.month | monthFormat}}  </p>
+            <h6>{{matchPlayed.matchDate.day}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

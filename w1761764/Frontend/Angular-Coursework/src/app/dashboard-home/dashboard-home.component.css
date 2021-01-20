@@ -1,0 +1,64 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+mat-card.mat-card.mat-focus-indicator.home-main {
+  background-image: linear-gradient(45deg,#147ca021, #2e8bc0);
+  color: white;
+  height: 78vh;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.home-main-text h1 {
+  position: relative;
+  margin: auto;
+  font-size: 35px !important;
+  font-weight: 500;
+}
+.home-main-text {
+  position: absolute;
+  height: 100%;
+  display: flex;
+}
+
+.home-page-images img {
+  width: 100px;
+  height: auto;
+}
+.home-img-container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  position: absolute;
+  top: 75%;
+}
+
+.home-img-container-top{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  position: absolute;
+  top: 10%;
+  flex-direction: row-reverse;
+}
+

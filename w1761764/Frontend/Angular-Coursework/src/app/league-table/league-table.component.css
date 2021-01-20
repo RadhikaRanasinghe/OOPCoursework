@@ -1,0 +1,50 @@
+.full-width-table {
+  width: 100%;
+}
+button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary {
+  margin: 10px;
+  background: #1a5379;
+  color: white;
+}
+input.ng-pristine.ng-invalid.ng-touched {
+  background: #b1d4e0;
+  border-radius: 5px;
+  width: 100px;
+  height: 20px;
+  border: none;
+}
+input.ng-pristine.ng-invalid{
+  background: #b1d4e0;
+  border-radius: 5px;
+  width: 100px;
+  height: 20px;
+  border: none;
+}
+input.ng-touched.ng-dirty.ng-valid{
+  background: #b1d4e0 !important;
+  border-radius: 5px !important;
+  width: 100px !important;
+  height: 20px !important;
+  border: 1px solid black !important;
+}
+
+.ltc-wrapper {
+  padding: 50px;
+  background: #b1d4e0;
+  height: 100vh;
+}
+
+.buttons-ltc-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+mat-card.mat-card.mat-focus-indicator{
+  margin-bottom: 10px;
+  width: 96%;
+  margin-left: 6px
+}
+.mat-elevation-z8 {
+  width: 99%;
+  margin-left: 5px;
+}
